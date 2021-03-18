@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Jack.png-90f56bebcf36b4852349e883e8586c45.stex"
+path="res://.import/Jack.png-36b903058b324233bb947ea7c660d3cf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Jack.png"
-dest_files=[ "res://.import/Jack.png-90f56bebcf36b4852349e883e8586c45.stex" ]
+source_file="res://jack/Jack.png"
+dest_files=[ "res://.import/Jack.png-36b903058b324233bb947ea7c660d3cf.stex" ]
 
 [params]
 

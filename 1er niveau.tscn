@@ -1,12 +1,12 @@
 [gd_scene load_steps=28 format=2]
 
-[ext_resource path="res://flat.png" type="Texture" id=1]
-[ext_resource path="res://ledge.png" type="Texture" id=2]
-[ext_resource path="res://rock.png" type="Texture" id=3]
-[ext_resource path="res://rock pillar.png" type="Texture" id=4]
-[ext_resource path="res://plant.png" type="Texture" id=5]
-[ext_resource path="res://hill.png" type="Texture" id=6]
-[ext_resource path="res://jack.gd" type="Script" id=7]
+[ext_resource path="res://Scene sprites/flat.png" type="Texture" id=1]
+[ext_resource path="res://Scene sprites/ledge.png" type="Texture" id=2]
+[ext_resource path="res://Scene sprites/rock.png" type="Texture" id=3]
+[ext_resource path="res://Scene sprites/rock pillar.png" type="Texture" id=4]
+[ext_resource path="res://Scene sprites/plant.png" type="Texture" id=5]
+[ext_resource path="res://Scene sprites/hill.png" type="Texture" id=6]
+[ext_resource path="res://jack/jack.gd" type="Script" id=7]
 [ext_resource path="res://jack/respiration/adventurer-idle-2-01.png" type="Texture" id=8]
 [ext_resource path="res://jack/respiration/adventurer-idle-2-00.png" type="Texture" id=9]
 [ext_resource path="res://jack/respiration/adventurer-idle-2-02.png" type="Texture" id=10]
@@ -25,6 +25,13 @@
 [ext_resource path="res://jack/attack/adventurer-attack3-02.png" type="Texture" id=23]
 [ext_resource path="res://jack/courir/adventurer-run-05.png" type="Texture" id=24]
 [ext_resource path="res://jack/attack/adventurer-attack3-01.png" type="Texture" id=25]
+
+
+
+
+
+
+
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
