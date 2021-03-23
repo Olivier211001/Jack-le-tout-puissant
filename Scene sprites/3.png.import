@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hill.png-7ffe7b610afc2441774c418bfbbbaec4.stex"
+path="res://.import/3.png-829c4492ea6e6e47ef183645b94e26fe.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://hill.png"
-dest_files=[ "res://.import/hill.png-7ffe7b610afc2441774c418bfbbbaec4.stex" ]
+source_file="res://Scene sprites/3.png"
+dest_files=[ "res://.import/3.png-829c4492ea6e6e47ef183645b94e26fe.stex" ]
 
 [params]
 

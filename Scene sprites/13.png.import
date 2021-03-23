@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ledge.png-defccaa04be7e9a3c347bef72e796549.stex"
+path="res://.import/13.png-b88cf8d3b4b85f866ae89636bbc165fd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ledge.png"
-dest_files=[ "res://.import/ledge.png-defccaa04be7e9a3c347bef72e796549.stex" ]
+source_file="res://Scene sprites/13.png"
+dest_files=[ "res://.import/13.png-b88cf8d3b4b85f866ae89636bbc165fd.stex" ]
 
 [params]
 

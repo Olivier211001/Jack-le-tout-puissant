@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/17.png-839151f4b44bf379d7c88582070f3f48.stex"
+path="res://.import/terrain_7.png-ba54ca65169b9736a1ed90c8eec59e27.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://17.png"
-dest_files=[ "res://.import/17.png-839151f4b44bf379d7c88582070f3f48.stex" ]
+source_file="res://Scene sprites/terrain_7.png"
+dest_files=[ "res://.import/terrain_7.png-ba54ca65169b9736a1ed90c8eec59e27.stex" ]
 
 [params]
 

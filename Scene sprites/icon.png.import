@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rock pillar.png-ece0135984af639e717ce932c742b456.stex"
+path="res://.import/icon.png-bc9068a9a8333af40b86c9417a1bdbc6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://rock pillar.png"
-dest_files=[ "res://.import/rock pillar.png-ece0135984af639e717ce932c742b456.stex" ]
+source_file="res://Scene sprites/icon.png"
+dest_files=[ "res://.import/icon.png-bc9068a9a8333af40b86c9417a1bdbc6.stex" ]
 
 [params]
 

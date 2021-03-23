@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/adventurer-Sheet.png-a82789ce52439d25d36bfa9aaac78a9a.stex"
+path="res://.import/7.png-5fbb6d6727edea9ed36bf03785cf11fe.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://adventurer-Sheet.png"
-dest_files=[ "res://.import/adventurer-Sheet.png-a82789ce52439d25d36bfa9aaac78a9a.stex" ]
+source_file="res://Scene sprites/7.png"
+dest_files=[ "res://.import/7.png-5fbb6d6727edea9ed36bf03785cf11fe.stex" ]
 
 [params]
 
