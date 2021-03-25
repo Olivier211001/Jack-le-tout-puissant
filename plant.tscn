@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scene sprites/plant.png" type="Texture" id=1]
+
+[node name="Sprite" type="Sprite"]
+position = Vector2( 337.861, 281.738 )
+texture = ExtResource( 1 )
