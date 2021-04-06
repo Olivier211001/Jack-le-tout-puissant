@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Bandits/Sprites/Heavy Bandit/Run/HeavyBandit_Run_5.png" type="Texture" id=1]
 [ext_resource path="res://Bandits/Sprites/Heavy Bandit/Run/HeavyBandit_Run_6.png" type="Texture" id=2]
@@ -21,6 +21,8 @@
 [ext_resource path="res://Bandits/Sprites/Heavy Bandit/Attack/HeavyBandit_Attack_3.png" type="Texture" id=19]
 [ext_resource path="res://Bandits/Sprites/Heavy Bandit/Attack/HeavyBandit_Attack_0.png" type="Texture" id=20]
 [ext_resource path="res://Bandits/Sprites/Heavy Bandit/Attack/HeavyBandit_Attack_6.png" type="Texture" id=21]
+[ext_resource path="res://Bandits/Sprites/Heavy Bandit/Death/HeavyBandit_Death_0.png" type="Texture" id=22]
+[ext_resource path="res://Bandits/Sprites/Heavy Bandit/Hurt/HeavyBandit_Hurt_0.png" type="Texture" id=23]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -29,34 +31,70 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "run",
+"speed": 12.0
+}, {
 "frames": [ ExtResource( 20 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 19 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 21 ), ExtResource( 18 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "attack",
 "speed": 8.0
 }, {
-"frames": [ ExtResource( 10 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 23 ), ExtResource( 22 ) ],
 "loop": true,
-"name": "run",
+"name": "die",
+"speed": 2.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "recup",
 "speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 25.0906, 31.1624 )
 
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 23.0199, 31.5416 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 5.46521, 21.6853 )
+
 [node name="bandit" type="KinematicBody2D"]
 position = Vector2( 446.886, 365.357 )
+collision_layer = 2
+collision_mask = 3
 script = ExtResource( 12 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 1.446, 1.725 )
 frames = SubResource( 1 )
-animation = "run"
+animation = "attack"
+frame = 4
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( -20.69, -1.00113 )
 enabled = true
 cast_to = Vector2( 0, 40 )
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -2.10217, 8.40894 )
+position = Vector2( 2.90351, 7.74155 )
 shape = SubResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 2.57956, 7.93704 )
+shape = SubResource( 3 )
+
+[node name="playerdetector" type="Area2D" parent="."]
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="playerdetector"]
+position = Vector2( -29.3669, -10.3181 )
+shape = SubResource( 4 )
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]

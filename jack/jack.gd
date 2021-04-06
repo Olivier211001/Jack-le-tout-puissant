@@ -22,17 +22,21 @@ func _physics_process(_delta):
    $AnimatedSprite.play("courir")
   elif Input.is_action_pressed("sword"):
    $AnimatedSprite.play("attack")
+   isAttacking = true
+   $AttackArea/CollisionShape2D.disabled = false
+   $AttackArea/CollisionShape2D2.disabled = false
   else:
    $AnimatedSprite.play("respiration")
-
-
+   $AttackArea/CollisionShape2D2.disabled = true
+   $AttackArea/CollisionShape2D.disabled = true
   if is_on_floor():
 	  if Input.is_action_pressed("jump"):
 		  velocity.y = -jump_speed 
   else:
 		  $AnimatedSprite.play("sauter")
 	
-
-  
-		
-			
+func _on_AnimatedSprite_animation_finished():
+	if $AnimatedSprite.animation == "attack":
+	   $AttackArea/CollisionShape2D.disabled 
+	   $AttackArea/CollisionShape2D2.disabled 
+	   isAttacking = false

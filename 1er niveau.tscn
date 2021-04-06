@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://flat.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ledge.tscn" type="PackedScene" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://rock.tscn" type="PackedScene" id=7]
 [ext_resource path="res://planteCarnivore.tscn" type="PackedScene" id=8]
 [ext_resource path="res://bandit.tscn" type="PackedScene" id=9]
+[ext_resource path="res://truestopper.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Health.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Jack.tscn" type="PackedScene" id=64]
 
 [node name="Forêt" type="Node2D"]
@@ -332,11 +334,20 @@ position = Vector2( 25724.1, -159.183 )
 [node name="StaticBody2D98" parent="." instance=ExtResource( 1 )]
 position = Vector2( 26551.8, -155.575 )
 
+[node name="StaticBody2D99" parent="." instance=ExtResource( 10 )]
+position = Vector2( -782.238, -183.517 )
+
+[node name="StaticBody2D100" parent="." instance=ExtResource( 10 )]
+position = Vector2( -296.102, -183.954 )
+rotation = 3.14159
+
 [node name="bandit" parent="." instance=ExtResource( 9 )]
-position = Vector2( -529.64, -230.659 )
+position = Vector2( -669.489, -236.486 )
 
 [node name="planteCarnivore2" parent="." instance=ExtResource( 8 )]
 position = Vector2( -45.2795, -246.081 )
 
 [node name="Jack" parent="." instance=ExtResource( 64 )]
 position = Vector2( -1299.51, -612.627 )
+
+[node name="Health" parent="." instance=ExtResource( 11 )]
