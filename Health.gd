@@ -11,10 +11,12 @@ func _read():
    _initialize()
 
 func set_max(new_max):
+	current = new_max
 	max_amount = max(1, new_max)
 	emit_signal("max_changed", max_amount)
 	
 func set_current(new_value):
+	current = new_value
 	current = clamp(current, 0, max_amount)
 	emit_signal("changed", current)
 	
