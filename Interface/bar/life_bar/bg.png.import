@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/35-350547_heart-png-icon-transparent-heart-images-cartoon-png.png-c4f98c4790de8d397478f4353d03faa5.stex"
+path="res://.import/bg.png-a1308f2e3efdadf9c485ac56a5a71b49.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://35-350547_heart-png-icon-transparent-heart-images-cartoon-png.png"
-dest_files=[ "res://.import/35-350547_heart-png-icon-transparent-heart-images-cartoon-png.png-c4f98c4790de8d397478f4353d03faa5.stex" ]
+source_file="res://Interface/bar/life_bar/bg.png"
+dest_files=[ "res://.import/bg.png-a1308f2e3efdadf9c485ac56a5a71b49.stex" ]
 
 [params]
 

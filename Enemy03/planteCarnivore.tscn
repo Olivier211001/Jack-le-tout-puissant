@@ -16,7 +16,8 @@
 [ext_resource path="res://Enemy03/attack_left03.png" type="Texture" id=14]
 [ext_resource path="res://Enemy03/attack_right03.png" type="Texture" id=15]
 [ext_resource path="res://Enemy03/attack_right07.png" type="Texture" id=16]
-[ext_resource path="res://planteCarnivore.gd" type="Script" id=17]
+[ext_resource path="res://Enemy03/planteCarnivore.gd" type="Script" id=17]
+
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {

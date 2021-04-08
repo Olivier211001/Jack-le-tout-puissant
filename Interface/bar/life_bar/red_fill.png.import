@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/109-1090358_transparent-minecraft-clip-art-transparent-minecraft-heart-png.png-6e901c4a246655c5e5b24b54bd648348.stex"
+path="res://.import/red_fill.png-94307444b3ef3a49ff6238a6e537c157.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://109-1090358_transparent-minecraft-clip-art-transparent-minecraft-heart-png.png"
-dest_files=[ "res://.import/109-1090358_transparent-minecraft-clip-art-transparent-minecraft-heart-png.png-6e901c4a246655c5e5b24b54bd648348.stex" ]
+source_file="res://Interface/bar/life_bar/red_fill.png"
+dest_files=[ "res://.import/red_fill.png-94307444b3ef3a49ff6238a6e537c157.stex" ]
 
 [params]
 

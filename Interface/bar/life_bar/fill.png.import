@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/kisspng-heart-shape-symbol-clip-art-valentine-greeting-5ae52318217807.3043748615249661681371.jpg-3b9a1f04861af416a549ee88f1d0e685.stex"
+path="res://.import/fill.png-591e6436c89946bba93abc3f1ee9093e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kisspng-heart-shape-symbol-clip-art-valentine-greeting-5ae52318217807.3043748615249661681371.jpg"
-dest_files=[ "res://.import/kisspng-heart-shape-symbol-clip-art-valentine-greeting-5ae52318217807.3043748615249661681371.jpg-3b9a1f04861af416a549ee88f1d0e685.stex" ]
+source_file="res://Interface/bar/life_bar/fill.png"
+dest_files=[ "res://.import/fill.png-591e6436c89946bba93abc3f1ee9093e.stex" ]
 
 [params]
 

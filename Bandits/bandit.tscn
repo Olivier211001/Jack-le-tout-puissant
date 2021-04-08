@@ -11,7 +11,7 @@
 [ext_resource path="res://Bandits/Sprites/Heavy Bandit/Run/HeavyBandit_Run_7.png" type="Texture" id=9]
 [ext_resource path="res://Bandits/Sprites/Heavy Bandit/Combat Idle/HeavyBandit_CombatIdle_2.png" type="Texture" id=10]
 [ext_resource path="res://Bandits/Sprites/Heavy Bandit/Combat Idle/HeavyBandit_CombatIdle_0.png" type="Texture" id=11]
-[ext_resource path="res://bandit.gd" type="Script" id=12]
+[ext_resource path="res://Bandits/bandit.gd" type="Script" id=12]
 [ext_resource path="res://Bandits/Sprites/Heavy Bandit/Combat Idle/HeavyBandit_CombatIdle_1.png" type="Texture" id=13]
 [ext_resource path="res://Bandits/Sprites/Heavy Bandit/Attack/HeavyBandit_Attack_1.png" type="Texture" id=14]
 [ext_resource path="res://Bandits/Sprites/Heavy Bandit/Attack/HeavyBandit_Attack_2.png" type="Texture" id=15]
@@ -23,6 +23,7 @@
 [ext_resource path="res://Bandits/Sprites/Heavy Bandit/Attack/HeavyBandit_Attack_6.png" type="Texture" id=21]
 [ext_resource path="res://Bandits/Sprites/Heavy Bandit/Death/HeavyBandit_Death_0.png" type="Texture" id=22]
 [ext_resource path="res://Bandits/Sprites/Heavy Bandit/Hurt/HeavyBandit_Hurt_0.png" type="Texture" id=23]
+
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {

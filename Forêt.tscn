@@ -1,15 +1,25 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://ledge.tscn" type="PackedScene" id=1]
-[ext_resource path="res://bandit.tscn" type="PackedScene" id=2]
-[ext_resource path="res://reverse-hill.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Jack.tscn" type="PackedScene" id=4]
-[ext_resource path="res://rock-pillar.tscn" type="PackedScene" id=5]
-[ext_resource path="res://plant.tscn" type="PackedScene" id=6]
-[ext_resource path="res://rock.tscn" type="PackedScene" id=7]
-[ext_resource path="res://hill.tscn" type="PackedScene" id=8]
-[ext_resource path="res://planteCarnivore.tscn" type="PackedScene" id=9]
-[ext_resource path="res://flat.tscn" type="PackedScene" id=10]
+[ext_resource path="res://1er niveau platforms scenes/ledge.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Bandits/bandit.tscn" type="PackedScene" id=2]
+[ext_resource path="res://1er niveau platforms scenes/reverse-hill.tscn" type="PackedScene" id=3]
+[ext_resource path="res://jack/Jack.tscn" type="PackedScene" id=4]
+[ext_resource path="res://1er niveau platforms scenes/rock-pillar.tscn" type="PackedScene" id=5]
+[ext_resource path="res://1er niveau platforms scenes/plant.tscn" type="PackedScene" id=6]
+[ext_resource path="res://1er niveau platforms scenes/rock.tscn" type="PackedScene" id=7]
+[ext_resource path="res://1er niveau platforms scenes/hill.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Enemy03/planteCarnivore.tscn" type="PackedScene" id=9]
+[ext_resource path="res://1er niveau platforms scenes/flat.tscn" type="PackedScene" id=10]
+
+
+
+
+
+
+
+
+
+
 
 [node name="Forêt" type="Node2D"]
 position = Vector2( 1407.03, 629.9 )
