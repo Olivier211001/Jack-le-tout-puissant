@@ -348,9 +348,41 @@ position = Vector2( -669.489, -236.486 )
 [node name="planteCarnivore2" parent="." instance=ExtResource( 8 )]
 position = Vector2( -45.2795, -246.081 )
 
-[node name="Jack" parent="." instance=ExtResource( 64 )]
-position = Vector2( -1299.51, -611.568 )
+[node name="Health" parent="." instance=ExtResource( 11 )]
 
 [node name="HealthBar" parent="." instance=ExtResource( 12 )]
 
-[node name="Health" parent="." instance=ExtResource( 11 )]
+[node name="Jack" parent="." instance=ExtResource( 64 )]
+position = Vector2( -1299.51, -611.568 )
+
+[node name="bandit2" parent="." instance=ExtResource( 9 )]
+position = Vector2( -443.095, -232.261 )
+
+[node name="bandit3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1272.73, -328.587 )
+
+[node name="StaticBody2D101" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1115.97, -287.741 )
+
+[node name="StaticBody2D103" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1933.48, -158.883 )
+
+[node name="StaticBody2D102" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1428.73, -288.93 )
+rotation = 3.14159
+
+[node name="bandit4" parent="." instance=ExtResource( 9 )]
+position = Vector2( 2185.79, -192.69 )
+
+[node name="bandit5" parent="." instance=ExtResource( 9 )]
+position = Vector2( 3769.39, -575.819 )
+
+[node name="StaticBody2D104" parent="." instance=ExtResource( 10 )]
+position = Vector2( 3533.84, -539.164 )
+
+[node name="StaticBody2D105" parent="." instance=ExtResource( 10 )]
+position = Vector2( 4005.98, -542.716 )
+rotation = 3.14159
+
+[node name="planteCarnivore" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2661.89, -371.36 )

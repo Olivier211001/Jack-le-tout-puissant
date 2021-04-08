@@ -64,7 +64,7 @@ extents = Vector2( 5.46521, 21.6853 )
 [node name="bandit" type="KinematicBody2D"]
 position = Vector2( 446.886, 365.357 )
 collision_layer = 2
-collision_mask = 3
+collision_mask = 5
 script = ExtResource( 12 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
