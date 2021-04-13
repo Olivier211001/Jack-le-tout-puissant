@@ -1,0 +1,92 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Enemy03/attack_left02.png" type="Texture" id=2]
+[ext_resource path="res://Enemy03/attack_right06.png" type="Texture" id=3]
+[ext_resource path="res://Enemy03/attack_left06.png" type="Texture" id=5]
+[ext_resource path="res://Enemy03/attack_left05.png" type="Texture" id=7]
+[ext_resource path="res://Enemy03/attack_left07.png" type="Texture" id=8]
+[ext_resource path="res://Enemy03/attack_right05.png" type="Texture" id=10]
+[ext_resource path="res://Enemy03/attack_left01.png" type="Texture" id=12]
+[ext_resource path="res://Enemy03/attack_right07.png" type="Texture" id=16]
+[ext_resource path="res://Enemy03/planteCarnivore.gd" type="Script" id=17]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 12 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "idle",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 3 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "attack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 5 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "attack2",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 16.612, 31.9991 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 24.0145, 35.6862 )
+
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 12.688
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 19.7714
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 23.3066, 35.4502 )
+
+[node name="planteCarnivore" type="KinematicBody2D"]
+position = Vector2( 350.888, 174.499 )
+script = ExtResource( 17 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 1.533, 1.557 )
+frames = SubResource( 1 )
+animation = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.764038, 19.264 )
+shape = SubResource( 2 )
+
+[node name="planti" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="planti"]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( -22.653, 16.9897 )
+shape = SubResource( 3 )
+
+[node name="heatzone" type="Area2D" parent="." groups=[
+"Grr",
+]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="heatzone"]
+position = Vector2( -31.6198, 27.8443 )
+shape = SubResource( 4 )
+disabled = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="heatzone"]
+position = Vector2( 31.3839, 27.6084 )
+shape = SubResource( 4 )
+disabled = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="heatzone"]
+modulate = Color( 0.788235, 1, 0.121569, 1 )
+position = Vector2( -0.707916, 2.3597 )
+shape = SubResource( 5 )
+
+[node name="planti2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="planti2"]
+position = Vector2( 24.3047, 16.7537 )
+shape = SubResource( 6 )
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="area_entered" from="planti" to="." method="_on_planti_area_entered"]
+[connection signal="area_entered" from="planti2" to="." method="_on_planti2_area_entered"]

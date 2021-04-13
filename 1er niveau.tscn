@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://1er niveau platforms scenes/flat.tscn" type="PackedScene" id=1]
 [ext_resource path="res://1er niveau platforms scenes/ledge.tscn" type="PackedScene" id=2]
@@ -7,10 +7,11 @@
 [ext_resource path="res://1er niveau platforms scenes/plant.tscn" type="PackedScene" id=5]
 [ext_resource path="res://1er niveau platforms scenes/hill.tscn" type="PackedScene" id=6]
 [ext_resource path="res://1er niveau platforms scenes/rock.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Enemy03/planteCarnivore.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Bandits/bandit.tscn" type="PackedScene" id=9]
 [ext_resource path="res://1er niveau platforms scenes/truestopper.tscn" type="PackedScene" id=10]
-[ext_resource path="res://jack/Jack.tscn" type="PackedScene" id=64]
+[ext_resource path="res://knight/Knight.tscn" type="PackedScene" id=11]
+[ext_resource path="res://jack/jack/Jack.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Enemy03/Enemy03/planteCarnivore.tscn" type="PackedScene" id=13]
 
 [node name="Forêt" type="Node2D"]
 position = Vector2( 1407.03, 629.9 )
@@ -340,20 +341,8 @@ position = Vector2( -782.238, -183.517 )
 position = Vector2( -296.102, -183.954 )
 rotation = 3.14159
 
-[node name="bandit" parent="." instance=ExtResource( 9 )]
-position = Vector2( -669.489, -236.486 )
-
-[node name="planteCarnivore2" parent="." instance=ExtResource( 8 )]
-position = Vector2( -45.2795, -246.081 )
-
-[node name="Jack" parent="." instance=ExtResource( 64 )]
-position = Vector2( -1790.51, -894.568 )
-
-[node name="bandit2" parent="." instance=ExtResource( 9 )]
-position = Vector2( -443.095, -232.261 )
-
-[node name="bandit3" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1272.73, -328.587 )
+[node name="Jack" parent="." instance=ExtResource( 12 )]
+position = Vector2( -1283.61, -525.092 )
 
 [node name="StaticBody2D101" parent="." instance=ExtResource( 10 )]
 position = Vector2( 1115.97, -287.741 )
@@ -365,12 +354,6 @@ position = Vector2( 1933.48, -158.883 )
 position = Vector2( 1428.73, -288.93 )
 rotation = 3.14159
 
-[node name="bandit4" parent="." instance=ExtResource( 9 )]
-position = Vector2( 2185.79, -192.69 )
-
-[node name="bandit5" parent="." instance=ExtResource( 9 )]
-position = Vector2( 3769.39, -575.819 )
-
 [node name="StaticBody2D104" parent="." instance=ExtResource( 10 )]
 position = Vector2( 3533.84, -539.164 )
 
@@ -378,5 +361,11 @@ position = Vector2( 3533.84, -539.164 )
 position = Vector2( 4005.98, -542.716 )
 rotation = 3.14159
 
-[node name="planteCarnivore" parent="." instance=ExtResource( 8 )]
-position = Vector2( 2661.89, -371.36 )
+[node name="planteCarnivore2" parent="." instance=ExtResource( 13 )]
+position = Vector2( -59.1266, -246.709 )
+
+[node name="bandit" parent="." instance=ExtResource( 9 )]
+position = Vector2( -550.917, -230.465 )
+
+[node name="knight" parent="." instance=ExtResource( 11 )]
+position = Vector2( 26018.5, -230.299 )
