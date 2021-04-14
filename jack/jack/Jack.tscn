@@ -18,7 +18,7 @@
 [ext_resource path="res://jack/sauter/adventurer-jump-02.png" type="Texture" id=16]
 [ext_resource path="res://jack/sauter/adventurer-jump-00.png" type="Texture" id=17]
 [ext_resource path="res://jack/sauter/adventurer-jump-03.png" type="Texture" id=18]
-[ext_resource path="res://jack/jack.gd" type="Script" id=19]
+[ext_resource path="res://jack/jack/jack.gd" type="Script" id=19]
 [ext_resource path="res://jack/jack/hurt/adventurer-hurt-00.png" type="Texture" id=20]
 [ext_resource path="res://jack/jack/hurt/adventurer-hurt-01.png" type="Texture" id=21]
 [ext_resource path="res://jack/jack/hurt/adventurer-hurt-02.png" type="Texture" id=22]
@@ -27,10 +27,10 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 5 ), ExtResource( 2 ) ],
+"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
 "loop": true,
-"name": "attack",
-"speed": 8.0
+"name": "hurt",
+"speed": 2.0
 }, {
 "frames": [ ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ) ],
 "loop": true,
@@ -52,10 +52,10 @@ animations = [ {
 "name": "sauter",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 5 ), ExtResource( 2 ) ],
 "loop": true,
-"name": "hurt",
-"speed": 2.0
+"name": "attack",
+"speed": 8.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]

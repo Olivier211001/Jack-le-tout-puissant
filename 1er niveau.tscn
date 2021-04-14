@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://1er niveau platforms scenes/flat.tscn" type="PackedScene" id=1]
 [ext_resource path="res://1er niveau platforms scenes/ledge.tscn" type="PackedScene" id=2]
@@ -7,11 +7,14 @@
 [ext_resource path="res://1er niveau platforms scenes/plant.tscn" type="PackedScene" id=5]
 [ext_resource path="res://1er niveau platforms scenes/hill.tscn" type="PackedScene" id=6]
 [ext_resource path="res://1er niveau platforms scenes/rock.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scene sprites/flat.png" type="Texture" id=8]
 [ext_resource path="res://Bandits/bandit.tscn" type="PackedScene" id=9]
 [ext_resource path="res://1er niveau platforms scenes/truestopper.tscn" type="PackedScene" id=10]
 [ext_resource path="res://knight/Knight.tscn" type="PackedScene" id=11]
 [ext_resource path="res://jack/jack/Jack.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Enemy03/Enemy03/planteCarnivore.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scene sprites/ledge.png" type="Texture" id=14]
+[ext_resource path="res://Scene sprites/rock.png" type="Texture" id=15]
 
 [node name="Forêt" type="Node2D"]
 position = Vector2( 1407.03, 629.9 )
@@ -94,23 +97,43 @@ position = Vector2( 7503.86, -394.557 )
 [node name="StaticBody2D19" parent="." instance=ExtResource( 4 )]
 position = Vector2( 8231.36, -624.127 )
 
-[node name="StaticBody2D20" parent="." instance=ExtResource( 1 )]
-position = Vector2( 9273.5, -647.403 )
+[node name="StaticBody2D20" type="StaticBody2D" parent="."]
+position = Vector2( 9042.08, -627.691 )
 
-[node name="StaticBody2D22" parent="." instance=ExtResource( 2 )]
-position = Vector2( 8602.2, -652.679 )
+[node name="StaticBody2D" type="StaticBody2D" parent="StaticBody2D20"]
 
-[node name="StaticBody2D23" parent="." instance=ExtResource( 2 )]
-position = Vector2( 8891.62, -650.679 )
+[node name="Sprite" type="Sprite" parent="StaticBody2D20/StaticBody2D"]
+position = Vector2( -442.794, -25.1925 )
+scale = Vector2( 1.181, 1.041 )
+texture = ExtResource( 14 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="StaticBody2D20"]
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D20/StaticBody2D2"]
+position = Vector2( -147.187, -23.1099 )
+scale = Vector2( 1.181, 1.041 )
+texture = ExtResource( 14 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="StaticBody2D20"]
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D20/StaticBody2D3"]
+position = Vector2( 612.782, -19.7884 )
+scale = Vector2( 1.181, 1.041 )
+texture = ExtResource( 14 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D20"]
+position = Vector2( 228.264, -19.1222 )
+scale = Vector2( 1.181, 1.041 )
+texture = ExtResource( 8 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D20"]
+polygon = PoolVector2Array( -594.776, -53.3569, 215.322, -45.3217, 751.649, -49.5621, 736.398, 11.0072, -578.888, -1.4339 )
 
 [node name="StaticBody2D21" parent="." instance=ExtResource( 2 )]
 position = Vector2( 7741.5, -500.567 )
 
-[node name="StaticBody2D24" parent="." instance=ExtResource( 2 )]
-position = Vector2( 9651.95, -649.735 )
-
 [node name="StaticBody2D18" parent="." instance=ExtResource( 6 )]
-position = Vector2( 10009.9, -615.115 )
+position = Vector2( 10009.9, -615.14 )
 
 [node name="StaticBody2D25" parent="." instance=ExtResource( 7 )]
 position = Vector2( 10463.8, -596.431 )
@@ -178,53 +201,91 @@ position = Vector2( 12588, -873.262 )
 [node name="StaticBody2D33" parent="." instance=ExtResource( 3 )]
 position = Vector2( 12372.3, -876.09 )
 
-[node name="StaticBody2D48" parent="." instance=ExtResource( 1 )]
-position = Vector2( 15053.3, -380.929 )
-
-[node name="StaticBody2D49" parent="." instance=ExtResource( 1 )]
-position = Vector2( 15521.8, -381.87 )
-
 [node name="StaticBody2D38" parent="." instance=ExtResource( 2 )]
 position = Vector2( 14572.7, -339.865 )
+
+[node name="StaticBody2D48" type="StaticBody2D" parent="."]
+position = Vector2( 15247.3, -372.392 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="StaticBody2D48"]
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D48/StaticBody2D"]
+position = Vector2( -196.596, -13.7069 )
+scale = Vector2( 1.181, 1.041 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D48"]
+position = Vector2( 282.311, -12.2959 )
+scale = Vector2( 1.181, 1.041 )
+texture = ExtResource( 8 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D48"]
+polygon = PoolVector2Array( -438.309, -39.5081, 522.691, -38.5081, 528.691, -24.5081, 515.691, 21.4919, -439.309, 16.4919, -448.309, -28.5081 )
+
+[node name="StaticBody2D49" type="StaticBody2D" parent="."]
+position = Vector2( 18504.6, -1284.8 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D49"]
+position = Vector2( -501.775, -37.2139 )
+scale = Vector2( 1.181, 1.041 )
+texture = ExtResource( 15 )
+
+[node name="Sprite2" type="Sprite" parent="StaticBody2D49"]
+position = Vector2( -362.404, -34.8928 )
+scale = Vector2( 1.181, 1.041 )
+texture = ExtResource( 15 )
+
+[node name="Sprite3" type="Sprite" parent="StaticBody2D49"]
+position = Vector2( -223.607, -31.667 )
+scale = Vector2( 1.181, 1.041 )
+texture = ExtResource( 15 )
+
+[node name="Sprite4" type="Sprite" parent="StaticBody2D49"]
+position = Vector2( -89.5469, -28.493 )
+scale = Vector2( 1.181, 1.041 )
+texture = ExtResource( 15 )
+
+[node name="Sprite5" type="Sprite" parent="StaticBody2D49"]
+position = Vector2( 45.4043, -24.7853 )
+scale = Vector2( 1.181, 1.041 )
+texture = ExtResource( 15 )
+
+[node name="Sprite6" type="Sprite" parent="StaticBody2D49"]
+position = Vector2( 182.205, -21.3574 )
+scale = Vector2( 1.181, 1.041 )
+texture = ExtResource( 15 )
+
+[node name="Sprite7" type="Sprite" parent="StaticBody2D49"]
+position = Vector2( 317.689, -18.0201 )
+scale = Vector2( 1.181, 1.041 )
+texture = ExtResource( 15 )
+
+[node name="Sprite8" type="Sprite" parent="StaticBody2D49"]
+position = Vector2( 452.512, -14.6833 )
+scale = Vector2( 1.181, 1.041 )
+texture = ExtResource( 15 )
+
+[node name="Sprite9" type="Sprite" parent="StaticBody2D49"]
+position = Vector2( 583.988, -10.6786 )
+scale = Vector2( 1.181, 1.041 )
+texture = ExtResource( 15 )
+
+[node name="Sprite10" type="Sprite" parent="StaticBody2D49"]
+position = Vector2( 713.471, -8.00903 )
+scale = Vector2( 1.181, 1.041 )
+texture = ExtResource( 15 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D49"]
+polygon = PoolVector2Array( -569.672, -63.6879, 781.107, -32.8214, 803.918, 9.11829, -555.498, -9.69617 )
 
 [node name="StaticBody2D50" parent="." instance=ExtResource( 4 )]
 position = Vector2( 17717.5, -1291.53 )
 
-[node name="StaticBody2D52" parent="." instance=ExtResource( 7 )]
-position = Vector2( 18003, -1321.87 )
-
-[node name="StaticBody2D53" parent="." instance=ExtResource( 7 )]
-position = Vector2( 18137.8, -1317.86 )
-
-[node name="StaticBody2D55" parent="." instance=ExtResource( 7 )]
-position = Vector2( 18273.5, -1313.79 )
-
 [node name="StaticBody2D51" parent="." instance=ExtResource( 3 )]
 position = Vector2( 15728.4, -452.754 )
 
-[node name="StaticBody2D57" parent="." instance=ExtResource( 7 )]
-position = Vector2( 18410.9, -1309.9 )
-
-[node name="StaticBody2D54" parent="." instance=ExtResource( 7 )]
-position = Vector2( 18546.8, -1306.02 )
-
-[node name="StaticBody2D56" parent="." instance=ExtResource( 7 )]
-position = Vector2( 18682.6, -1302.13 )
-
-[node name="StaticBody2D58" parent="." instance=ExtResource( 7 )]
-position = Vector2( 18822.5, -1297.9 )
-
-[node name="StaticBody2D59" parent="." instance=ExtResource( 7 )]
-position = Vector2( 18960.2, -1293.66 )
-
-[node name="StaticBody2D61" parent="." instance=ExtResource( 7 )]
-position = Vector2( 19100, -1289.07 )
-
 [node name="StaticBody2D62" parent="." instance=ExtResource( 4 )]
-position = Vector2( 19546.6, -1345.13 )
-
-[node name="StaticBody2D60" parent="." instance=ExtResource( 7 )]
-position = Vector2( 19238.1, -1284.83 )
+position = Vector2( 19524, -1355.74 )
 
 [node name="StaticBody2D72" parent="." instance=ExtResource( 7 )]
 position = Vector2( 15936, -517.051 )
@@ -239,10 +300,10 @@ position = Vector2( 16258.3, -673.187 )
 position = Vector2( 16616.3, -745.187 )
 
 [node name="StaticBody2D63" parent="." instance=ExtResource( 6 )]
-position = Vector2( 19980, -1339.78 )
+position = Vector2( 19957.4, -1350.39 )
 
 [node name="StaticBody2D64" parent="." instance=ExtResource( 4 )]
-position = Vector2( 20437.4, -1344.53 )
+position = Vector2( 20414.8, -1355.14 )
 
 [node name="StaticBody2D75" parent="." instance=ExtResource( 3 )]
 position = Vector2( 16718.4, -809.176 )
@@ -251,16 +312,31 @@ position = Vector2( 16718.4, -809.176 )
 position = Vector2( 16893.5, -907.051 )
 
 [node name="StaticBody2D65" parent="." instance=ExtResource( 6 )]
-position = Vector2( 20870.1, -1339.8 )
+position = Vector2( 20847.3, -1351.96 )
 
-[node name="StaticBody2D66" parent="." instance=ExtResource( 1 )]
-position = Vector2( 21615.6, -1274.6 )
+[node name="StaticBody2D54" type="StaticBody2D" parent="."]
+position = Vector2( 21594.3, -1271.96 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D54"]
+position = Vector2( -367.656, -19.2962 )
+scale = Vector2( 1.081, 1.041 )
+texture = ExtResource( 14 )
+
+[node name="Sprite2" type="Sprite" parent="StaticBody2D54"]
+position = Vector2( -28.0605, -16.9575 )
+scale = Vector2( 1.081, 1.041 )
+texture = ExtResource( 8 )
+
+[node name="Sprite3" type="Sprite" parent="StaticBody2D54"]
+position = Vector2( 321.859, -16.0108 )
+scale = Vector2( 1.081, 1.041 )
+texture = ExtResource( 14 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D54"]
+polygon = PoolVector2Array( -511.623, -47.1308, 450.219, -45.876, 455.889, -38.3165, 436.045, 8.6156, -493.686, -0.938782, -509.162, -26.9325 )
 
 [node name="StaticBody2D78" parent="." instance=ExtResource( 3 )]
 position = Vector2( 16937.9, -967.176 )
-
-[node name="StaticBody2D67" parent="." instance=ExtResource( 2 )]
-position = Vector2( 21235.4, -1278.18 )
 
 [node name="StaticBody2D79" parent="." instance=ExtResource( 3 )]
 position = Vector2( 17024, -1029.18 )
@@ -273,9 +349,6 @@ position = Vector2( 17310.2, -1174.32 )
 
 [node name="StaticBody2D80" parent="." instance=ExtResource( 3 )]
 position = Vector2( 17108, -1083.18 )
-
-[node name="StaticBody2D68" parent="." instance=ExtResource( 2 )]
-position = Vector2( 21990.9, -1277.19 )
 
 [node name="StaticBody2D70" parent="." instance=ExtResource( 3 )]
 position = Vector2( 22511.3, -1254.82 )
@@ -295,8 +368,16 @@ position = Vector2( 23577.3, -1032.7 )
 [node name="StaticBody2D86" parent="." instance=ExtResource( 6 )]
 position = Vector2( 23365.7, -258.45 )
 
-[node name="StaticBody2D83" parent="." instance=ExtResource( 7 )]
-position = Vector2( 23025.2, -1261.5 )
+[node name="StaticBody2D55" type="StaticBody2D" parent="."]
+position = Vector2( 23029.3, -1274.92 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D55"]
+position = Vector2( 0.681641, 15.4193 )
+scale = Vector2( 1.081, 1.041 )
+texture = ExtResource( 15 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D55"]
+polygon = PoolVector2Array( 63.8203, -9.83191, -63.5215, -10.4542, -88.959, 33.3043, -21.7793, 45.6648, 25.7891, 33.1781, 52.4941, 36.7649 )
 
 [node name="StaticBody2D94" parent="." instance=ExtResource( 6 )]
 position = Vector2( 23309.3, -1222.59 )
@@ -322,18 +403,6 @@ position = Vector2( 24090, -178.052 )
 [node name="StaticBody2D84" parent="." instance=ExtResource( 2 )]
 position = Vector2( 23797.1, -197.816 )
 
-[node name="StaticBody2D97" parent="." instance=ExtResource( 1 )]
-position = Vector2( 26089.1, -154.971 )
-
-[node name="StaticBody2D95" parent="." instance=ExtResource( 1 )]
-position = Vector2( 25353.6, -156.94 )
-
-[node name="StaticBody2D96" parent="." instance=ExtResource( 2 )]
-position = Vector2( 25724.1, -159.183 )
-
-[node name="StaticBody2D98" parent="." instance=ExtResource( 1 )]
-position = Vector2( 26551.8, -155.575 )
-
 [node name="StaticBody2D99" parent="." instance=ExtResource( 10 )]
 position = Vector2( -782.238, -183.517 )
 
@@ -341,14 +410,83 @@ position = Vector2( -782.238, -183.517 )
 position = Vector2( -296.102, -183.954 )
 rotation = 3.14159
 
+[node name="StaticBody2D95" type="StaticBody2D" parent="."]
+position = Vector2( 26197.8, -136.329 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="StaticBody2D95"]
+position = Vector2( -497.517, 0.778931 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D95/StaticBody2D2"]
+position = Vector2( 97.2832, -25.2611 )
+scale = Vector2( 1.181, 1.041 )
+texture = ExtResource( 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="StaticBody2D95"]
+position = Vector2( -929.894, -0.404724 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D95/StaticBody2D"]
+position = Vector2( 56.082, -24.1386 )
+scale = Vector2( 1.181, 1.041 )
+texture = ExtResource( 8 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="StaticBody2D95"]
+position = Vector2( 588.365, 0.540161 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D95/StaticBody2D3"]
+position = Vector2( -32.918, -24.5124 )
+scale = Vector2( 1.181, 1.041 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D95"]
+position = Vector2( 78.4512, -23.501 )
+scale = Vector2( 1.181, 1.041 )
+texture = ExtResource( 8 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D95"]
+polygon = PoolVector2Array( -1120.53, -50.2936, 793.875, -51.881, 803.191, -38.2635, 792.514, 7.78851, -1118.68, 7.56174, -1127.87, -41.2286 )
+
 [node name="Jack" parent="." instance=ExtResource( 12 )]
-position = Vector2( -1283.61, -525.092 )
+position = Vector2( -1235.54, -572.656 )
+
+[node name="bandit2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1273.41, -330.457 )
+
+[node name="planteCarnivore13" parent="." instance=ExtResource( 13 )]
+position = Vector2( 20176.2, -1369.96 )
 
 [node name="StaticBody2D101" parent="." instance=ExtResource( 10 )]
 position = Vector2( 1115.97, -287.741 )
 
+[node name="planteCarnivore2" parent="." instance=ExtResource( 13 )]
+position = Vector2( -62.1127, -247.639 )
+
 [node name="StaticBody2D103" parent="." instance=ExtResource( 10 )]
 position = Vector2( 1933.48, -158.883 )
+
+[node name="planteCarnivore12" parent="." instance=ExtResource( 13 )]
+position = Vector2( 16257.3, -751.753 )
+
+[node name="planteCarnivore17" parent="." instance=ExtResource( 13 )]
+position = Vector2( 21367.3, -1372.27 )
+
+[node name="planteCarnivore16" parent="." instance=ExtResource( 13 )]
+position = Vector2( 21621.2, -1371.41 )
+
+[node name="planteCarnivore15" parent="." instance=ExtResource( 13 )]
+position = Vector2( 21870.6, -1370.13 )
+
+[node name="StaticBody2D113" parent="." instance=ExtResource( 10 )]
+position = Vector2( 19534.8, -1419.73 )
+
+[node name="StaticBody2D114" parent="." instance=ExtResource( 10 )]
+position = Vector2( 19954.3, -1410.9 )
+rotation = 3.14159
+
+[node name="bandit20" parent="." instance=ExtResource( 9 )]
+position = Vector2( 19746.1, -1455.59 )
+
+[node name="planteCarnivore14" parent="." instance=ExtResource( 13 )]
+position = Vector2( 21112.5, -1373.15 )
 
 [node name="StaticBody2D102" parent="." instance=ExtResource( 10 )]
 position = Vector2( 1428.73, -288.93 )
@@ -361,11 +499,175 @@ position = Vector2( 3533.84, -539.164 )
 position = Vector2( 4005.98, -542.716 )
 rotation = 3.14159
 
-[node name="planteCarnivore2" parent="." instance=ExtResource( 13 )]
-position = Vector2( -59.1266, -246.709 )
+[node name="bandit6" parent="." instance=ExtResource( 9 )]
+position = Vector2( 4802.45, -340.864 )
+
+[node name="planteCarnivore3" parent="." instance=ExtResource( 13 )]
+position = Vector2( 5474.3, -466.807 )
 
 [node name="bandit" parent="." instance=ExtResource( 9 )]
-position = Vector2( -550.917, -230.465 )
+position = Vector2( -582.953, -232.467 )
+
+[node name="bandit5" parent="." instance=ExtResource( 9 )]
+position = Vector2( -382.273, -235.674 )
+
+[node name="bandit3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 2157.13, -190.787 )
+
+[node name="planteCarnivore" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2652.03, -372.826 )
+
+[node name="bandit4" parent="." instance=ExtResource( 9 )]
+position = Vector2( 3768.33, -580.422 )
+
+[node name="planteCarnivore18" parent="." instance=ExtResource( 13 )]
+position = Vector2( 4431.2, -283.876 )
+
+[node name="StaticBody2D107" parent="." instance=ExtResource( 10 )]
+position = Vector2( 4956.28, -301.875 )
+rotation = 3.14159
+
+[node name="StaticBody2D106" parent="." instance=ExtResource( 10 )]
+position = Vector2( 4643.85, -302.819 )
+
+[node name="planteCarnivore5" parent="." instance=ExtResource( 13 )]
+position = Vector2( 6786.86, -304.854 )
+
+[node name="planteCarnivore6" parent="." instance=ExtResource( 13 )]
+position = Vector2( 7738.99, -581.466 )
+
+[node name="StaticBody2D109" parent="." instance=ExtResource( 10 )]
+position = Vector2( 10002.8, -682.438 )
+rotation = 3.14159
+
+[node name="StaticBody2D108" parent="." instance=ExtResource( 10 )]
+position = Vector2( 8245.17, -703.19 )
+
+[node name="bandit11" parent="." instance=ExtResource( 9 )]
+position = Vector2( 9831.41, -717.665 )
+
+[node name="bandit10" parent="." instance=ExtResource( 9 )]
+position = Vector2( 9463.05, -716.447 )
+
+[node name="bandit9" parent="." instance=ExtResource( 9 )]
+position = Vector2( 9088.86, -719.447 )
+
+[node name="bandit8" parent="." instance=ExtResource( 9 )]
+position = Vector2( 8811.56, -719.447 )
+
+[node name="bandit7" parent="." instance=ExtResource( 9 )]
+position = Vector2( 8517.98, -721.713 )
 
 [node name="knight" parent="." instance=ExtResource( 11 )]
-position = Vector2( 26018.5, -230.299 )
+position = Vector2( 26221.9, -233.867 )
+
+[node name="StaticBody2D111" parent="." instance=ExtResource( 10 )]
+position = Vector2( 26995.1, -186.231 )
+rotation = 3.14159
+
+[node name="StaticBody2D112" parent="." instance=ExtResource( 10 )]
+position = Vector2( 25076.2, -184.916 )
+
+[node name="bandit14" parent="." instance=ExtResource( 9 )]
+position = Vector2( 13950.2, -381.981 )
+
+[node name="bandit16" parent="." instance=ExtResource( 9 )]
+position = Vector2( 14158.4, -377.935 )
+
+[node name="planteCarnivore9" parent="." instance=ExtResource( 13 )]
+position = Vector2( 13599.1, -391.662 )
+
+[node name="StaticBody2D22" parent="." instance=ExtResource( 10 )]
+position = Vector2( 12296, -348.596 )
+
+[node name="StaticBody2D23" parent="." instance=ExtResource( 10 )]
+position = Vector2( 12776.5, -337.893 )
+rotation = 3.14159
+
+[node name="planteCarnivore11" parent="." instance=ExtResource( 13 )]
+position = Vector2( 13006.6, -391.456 )
+
+[node name="planteCarnivore10" parent="." instance=ExtResource( 13 )]
+position = Vector2( 12039.6, -397.96 )
+
+[node name="planteCarnivore8" parent="." instance=ExtResource( 13 )]
+position = Vector2( 13222.8, -390.978 )
+
+[node name="bandit15" parent="." instance=ExtResource( 9 )]
+position = Vector2( 14566.6, -410.11 )
+
+[node name="bandit13" parent="." instance=ExtResource( 9 )]
+position = Vector2( 12658.1, -381.652 )
+
+[node name="bandit12" parent="." instance=ExtResource( 9 )]
+position = Vector2( 12393.7, -379.772 )
+
+[node name="planteCarnivore7" parent="." instance=ExtResource( 13 )]
+position = Vector2( 10876.5, -798.386 )
+
+[node name="StaticBody2D96" parent="." instance=ExtResource( 10 )]
+position = Vector2( 14319.8, -339.459 )
+rotation = 3.14159
+
+[node name="StaticBody2D97" parent="." instance=ExtResource( 10 )]
+position = Vector2( 14724.7, -368.984 )
+rotation = -3.14159
+
+[node name="StaticBody2D98" parent="." instance=ExtResource( 10 )]
+position = Vector2( 14412.2, -365.991 )
+
+[node name="StaticBody2D24" parent="." instance=ExtResource( 10 )]
+position = Vector2( 13831.5, -339.459 )
+
+[node name="bandit17" parent="." instance=ExtResource( 9 )]
+position = Vector2( 15584.4, -451.365 )
+
+[node name="bandit18" parent="." instance=ExtResource( 9 )]
+position = Vector2( 14895.5, -454.54 )
+
+[node name="bandit19" parent="." instance=ExtResource( 9 )]
+position = Vector2( 15255.8, -454.54 )
+
+[node name="StaticBody2D110" parent="." instance=ExtResource( 10 )]
+position = Vector2( 14800.9, -416.773 )
+
+[node name="bandit21" parent="." instance=ExtResource( 9 )]
+position = Vector2( 20637.2, -1454.54 )
+
+[node name="StaticBody2D115" parent="." instance=ExtResource( 10 )]
+position = Vector2( 20424.9, -1420.49 )
+
+[node name="StaticBody2D116" parent="." instance=ExtResource( 10 )]
+position = Vector2( 20845.6, -1413.09 )
+rotation = 3.14159
+
+[node name="bandit22" parent="." instance=ExtResource( 9 )]
+position = Vector2( 17836, -1387.99 )
+
+[node name="bandit23" parent="." instance=ExtResource( 9 )]
+position = Vector2( 18044.2, -1385.66 )
+
+[node name="bandit24" parent="." instance=ExtResource( 9 )]
+position = Vector2( 18281.1, -1379.02 )
+
+[node name="bandit25" parent="." instance=ExtResource( 9 )]
+position = Vector2( 18502.7, -1374.13 )
+
+[node name="bandit26" parent="." instance=ExtResource( 9 )]
+position = Vector2( 18728.5, -1367.91 )
+
+[node name="bandit27" parent="." instance=ExtResource( 9 )]
+position = Vector2( 18923.9, -1367.04 )
+
+[node name="bandit28" parent="." instance=ExtResource( 9 )]
+position = Vector2( 19137.7, -1363.43 )
+
+[node name="bandit29" parent="." instance=ExtResource( 9 )]
+position = Vector2( 19325.7, -1358.41 )
+
+[node name="StaticBody2D52" parent="." instance=ExtResource( 10 )]
+position = Vector2( 17729.6, -1361.13 )
+
+[node name="StaticBody2D53" parent="." instance=ExtResource( 10 )]
+position = Vector2( 19417.9, -1333.26 )
+rotation = 3.14159
