@@ -8,7 +8,7 @@ var velocity = Vector2()
 
 var isAttacking = false
 
-var life = 5
+var life = 10
 
 var hurted = false
 
