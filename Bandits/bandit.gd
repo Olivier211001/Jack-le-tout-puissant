@@ -13,7 +13,6 @@ var dead = false
 var attack = false
 
 
-
 func _physics_process(_delta):
 
 	if dead == false && attack == false:
