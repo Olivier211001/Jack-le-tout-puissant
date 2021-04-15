@@ -342,7 +342,7 @@ position = Vector2( -296.102, -183.954 )
 rotation = 3.14159
 
 [node name="Jack" parent="." instance=ExtResource( 12 )]
-position = Vector2( -1247.14, -604.246 )
+position = Vector2( -1283.61, -525.092 )
 
 [node name="StaticBody2D101" parent="." instance=ExtResource( 10 )]
 position = Vector2( 1115.97, -287.741 )
