@@ -44,7 +44,7 @@ animations = [ {
 "frames": [ ExtResource( 23 ), ExtResource( 22 ) ],
 "loop": true,
 "name": "die",
-"speed": 2.0
+"speed": 8.0
 }, {
 "frames": [  ],
 "loop": true,
