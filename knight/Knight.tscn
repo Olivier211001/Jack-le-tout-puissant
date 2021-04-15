@@ -1,5 +1,6 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=50 format=2]
 
+[ext_resource path="res://knight/ProgressBar.gd" type="Script" id=1]
 [ext_resource path="res://knight/Hero Knight/Sprites/HeroKnight/Attack1/HeroKnight_Attack1_2.png" type="Texture" id=2]
 [ext_resource path="res://knight/Hero Knight/Sprites/HeroKnight/Roll/HeroKnight_Roll_4.png" type="Texture" id=4]
 [ext_resource path="res://knight/Hero Knight/Sprites/HeroKnight/Roll/HeroKnight_Roll_2.png" type="Texture" id=5]
@@ -79,6 +80,15 @@ extents = Vector2( 27.0344, 50.3897 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 8.24866, 21.0033 )
 
+[sub_resource type="Theme" id=5]
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.807843, 0.0313726, 0.0313726, 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.760784, 0.709804, 0.709804, 1 )
+corner_detail = 10
+
 [node name="knight" type="KinematicBody2D"]
 position = Vector2( 446.886, 365.357 )
 collision_layer = 2
@@ -122,5 +132,23 @@ disabled = true
 position = Vector2( 31.3555, -10.3768 )
 shape = SubResource( 4 )
 disabled = true
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_left = -33.0
+margin_top = -68.0
+margin_right = 55.0
+margin_bottom = -59.0
+theme = SubResource( 5 )
+custom_styles/fg = SubResource( 8 )
+custom_styles/bg = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+max_value = 10.0
+value = 10.0
+percent_visible = false
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]

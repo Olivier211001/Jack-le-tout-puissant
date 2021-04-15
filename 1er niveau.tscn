@@ -127,7 +127,7 @@ scale = Vector2( 1.181, 1.041 )
 texture = ExtResource( 8 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D20"]
-polygon = PoolVector2Array( -594.776, -53.3569, 215.322, -45.3217, 751.649, -49.5621, 736.398, 11.0072, -578.888, -1.4339 )
+polygon = PoolVector2Array( -594.776, -53.3569, 215.322, -45.3217, 751.647, -49.5919, 736.398, 11.0072, -578.888, -1.4339 )
 
 [node name="StaticBody2D21" parent="." instance=ExtResource( 2 )]
 position = Vector2( 7741.5, -500.567 )
@@ -446,7 +446,7 @@ texture = ExtResource( 8 )
 polygon = PoolVector2Array( -1120.53, -50.2936, 793.875, -51.881, 803.191, -38.2635, 792.514, 7.78851, -1118.68, 7.56174, -1127.87, -41.2286 )
 
 [node name="Jack" parent="." instance=ExtResource( 12 )]
-position = Vector2( -1235.54, -572.656 )
+position = Vector2( -1224.99, -558.261 )
 
 [node name="bandit2" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1273.41, -330.457 )
@@ -562,11 +562,11 @@ position = Vector2( 8517.98, -721.713 )
 position = Vector2( 26221.9, -233.867 )
 
 [node name="StaticBody2D111" parent="." instance=ExtResource( 10 )]
-position = Vector2( 26995.1, -186.231 )
+position = Vector2( 26995.1, -210.042 )
 rotation = 3.14159
 
 [node name="StaticBody2D112" parent="." instance=ExtResource( 10 )]
-position = Vector2( 25076.2, -184.916 )
+position = Vector2( 25073, -207.933 )
 
 [node name="bandit14" parent="." instance=ExtResource( 9 )]
 position = Vector2( 13950.2, -381.981 )

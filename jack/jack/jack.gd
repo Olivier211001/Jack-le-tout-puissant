@@ -8,12 +8,12 @@ var velocity = Vector2()
 
 var isAttacking = false
 
-var life = 5
+var life = 10
 
 var hurted = false
 
 func _physics_process(_delta):
- if hurted == false:	
+ if hurted == false:
 	  velocity.x = (int(Input.is_action_pressed("right")) - int(Input.is_action_pressed("left"))) * speed 
 
 	  velocity.y += gravity
@@ -39,8 +39,8 @@ func _physics_process(_delta):
 			  velocity.y = -jump_speed 
 	  else:
 			  $AnimatedSprite.play("sauter")
-		
-	
+
+
 func _on_AnimatedSprite_animation_finished():
 	if $AnimatedSprite.animation == "attack":
 	   $AttackArea/CollisionShape2D.disabled 
@@ -49,7 +49,7 @@ func _on_AnimatedSprite_animation_finished():
 
 	if $AnimatedSprite.animation == "hurt":
 		hurted = false
-	
+
 	if $AnimatedSprite.animation == "die":
 		queue_free()
 
@@ -66,7 +66,3 @@ func _on_jackarea_area_entered(area):
 	  life = life - 1
 	if life == 0:
 		$AnimatedSprite.play("die")
-	  
-	
-
-

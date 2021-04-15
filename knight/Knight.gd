@@ -49,6 +49,8 @@ func _physics_process(_delta):
 		if is_on_wall():
 			 if dir == false:
 				  dir = true
+			 else:
+				  dir = false
 			
 			 direction = direction * -1
 			 $RayCast2D.position.x *= -1
