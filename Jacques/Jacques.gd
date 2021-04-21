@@ -86,8 +86,7 @@ func _on_Area2D_area_entered(area):
 		elif dead == false:
 		  flip = false
 		  $AnimatedSprite.play("hurt")	
-		 
-		
+
 		
 	if area.is_in_group("Flip") && dead == false && hurted == false:
 		 attack = false
@@ -100,7 +99,7 @@ func _on_Area2D_area_entered(area):
 		 flip = true
 		 $AnimatedSprite.play("idle")	
 	
-
+		
 
 func _on_AnimatedSprite_animation_finished():
 	if $AnimatedSprite.animation == "die":
@@ -119,7 +118,6 @@ func _on_AnimatedSprite_animation_finished():
 		 if yep == 2:
 			 dir = true
 		 flip = false
-		
 	
 		
 func _on_flipD_area_entered(area):

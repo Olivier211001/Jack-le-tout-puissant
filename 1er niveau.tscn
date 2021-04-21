@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://1er niveau platforms scenes/flat.tscn" type="PackedScene" id=1]
 [ext_resource path="res://1er niveau platforms scenes/ledge.tscn" type="PackedScene" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Enemy03/Enemy03/planteCarnivore.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scene sprites/ledge.png" type="Texture" id=14]
 [ext_resource path="res://Scene sprites/rock.png" type="Texture" id=15]
+[ext_resource path="res://Jacques/Jacques.tscn" type="PackedScene" id=16]
 
 [node name="Forêt" type="Node2D"]
 position = Vector2( 1407.03, 629.9 )
@@ -190,6 +191,7 @@ position = Vector2( 13149.5, -916.025 )
 position = Vector2( 12881.4, -898.384 )
 
 [node name="StaticBody2D37" parent="." instance=ExtResource( 1 )]
+visible = false
 position = Vector2( 12542.2, -313.047 )
 
 [node name="StaticBody2D35" parent="." instance=ExtResource( 2 )]
@@ -446,7 +448,7 @@ texture = ExtResource( 8 )
 polygon = PoolVector2Array( -1120.53, -50.2936, 793.875, -51.881, 803.191, -38.2635, 792.514, 7.78851, -1118.68, 7.56174, -1127.87, -41.2286 )
 
 [node name="Jack" parent="." instance=ExtResource( 12 )]
-position = Vector2( -1224.99, -558.261 )
+position = Vector2( 25881.9, -286.423 )
 
 [node name="bandit2" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1273.41, -330.457 )
@@ -558,8 +560,11 @@ position = Vector2( 8811.56, -719.447 )
 [node name="bandit7" parent="." instance=ExtResource( 9 )]
 position = Vector2( 8517.98, -721.713 )
 
+[node name="Jacques" parent="." instance=ExtResource( 16 )]
+position = Vector2( 26432.7, -294.531 )
+
 [node name="knight" parent="." instance=ExtResource( 11 )]
-position = Vector2( 26221.9, -233.867 )
+position = Vector2( 26340.3, 47.1061 )
 
 [node name="StaticBody2D111" parent="." instance=ExtResource( 10 )]
 position = Vector2( 26995.1, -210.042 )
