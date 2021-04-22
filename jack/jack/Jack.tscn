@@ -27,6 +27,11 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 5 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "attack",
+"speed": 8.0
+}, {
 "frames": [ ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ) ],
 "loop": true,
 "name": "die",
@@ -37,25 +42,20 @@ animations = [ {
 "name": "hurt",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 17 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 18 ) ],
-"loop": true,
-"name": "sauter",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
 "loop": true,
 "name": "respiration",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "sauter",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 11 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 14 ) ],
 "loop": true,
 "name": "courir",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 5 ), ExtResource( 2 ) ],
-"loop": true,
-"name": "attack",
-"speed": 8.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -97,8 +97,6 @@ smoothing_enabled = true
 [node name="Interface" parent="Camera2D/CanvasLayer" instance=ExtResource( 23 )]
 margin_left = 0.50415
 margin_top = -0.498596
-margin_right = -276.496
-margin_bottom = -89.4986
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -1.45615, 6.45467 )
