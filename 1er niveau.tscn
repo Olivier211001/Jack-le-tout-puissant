@@ -193,7 +193,6 @@ position = Vector2( 13149.5, -916.025 )
 position = Vector2( 12881.4, -898.384 )
 
 [node name="StaticBody2D37" parent="." instance=ExtResource( 1 )]
-visible = false
 position = Vector2( 12542.2, -313.047 )
 
 [node name="StaticBody2D35" parent="." instance=ExtResource( 2 )]
@@ -671,6 +670,24 @@ position = Vector2( 19137.7, -1363.43 )
 
 [node name="bandit29" parent="." instance=ExtResource( 9 )]
 position = Vector2( 19325.7, -1358.41 )
+
+[node name="LifeWin5" parent="." instance=ExtResource( 18 )]
+position = Vector2( 22732.6, -1351.31 )
+
+[node name="LifeWin4" parent="." instance=ExtResource( 18 )]
+position = Vector2( 22297.4, -1353.26 )
+
+[node name="LifeWin6" parent="." instance=ExtResource( 18 )]
+position = Vector2( 15980.7, -676.311 )
+
+[node name="LifeWin3" parent="." instance=ExtResource( 18 )]
+position = Vector2( 10514.9, -755.621 )
+
+[node name="LifeWin7" parent="." instance=ExtResource( 18 )]
+position = Vector2( 6453.28, -258.115 )
+
+[node name="LifeWin2" parent="." instance=ExtResource( 18 )]
+position = Vector2( 1641.04, -210.433 )
 
 [node name="LifeWin" parent="." instance=ExtResource( 18 )]
 position = Vector2( 25362, -232.161 )
