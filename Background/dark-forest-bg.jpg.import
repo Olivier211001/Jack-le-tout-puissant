@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Hello.png-de09ab29a20afc76c07e21eeda5e2076.stex"
+path="res://.import/dark-forest-bg.jpg-3e43eab8ecfc758a7b92e439dd33b60a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Hello.png"
-dest_files=[ "res://.import/Hello.png-de09ab29a20afc76c07e21eeda5e2076.stex" ]
+source_file="res://Background/dark-forest-bg.jpg"
+dest_files=[ "res://.import/dark-forest-bg.jpg-3e43eab8ecfc758a7b92e439dd33b60a.stex" ]
 
 [params]
 

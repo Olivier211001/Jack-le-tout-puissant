@@ -16,8 +16,8 @@
 [ext_resource path="res://Scene sprites/ledge.png" type="Texture" id=14]
 [ext_resource path="res://Scene sprites/rock.png" type="Texture" id=15]
 [ext_resource path="res://Jacques/Jacques.tscn" type="PackedScene" id=16]
-[ext_resource path="res://MushroomLife/LifeWin.gd" type="Script" id=17]
 [ext_resource path="res://MushroomLife/LifeWin.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Background/dark-forest-bg.jpg" type="Texture" id=19]
 
 [node name="Forêt" type="Node2D"]
 position = Vector2( 1407.03, 629.9 )
@@ -450,7 +450,7 @@ texture = ExtResource( 8 )
 polygon = PoolVector2Array( -1120.53, -50.2936, 793.875, -51.881, 803.191, -38.2635, 792.514, 7.78851, -1118.68, 7.56174, -1127.87, -41.2286 )
 
 [node name="Jack" parent="." instance=ExtResource( 12 )]
-position = Vector2( 25881.9, -286.423 )
+position = Vector2( -1234.17, -469.435 )
 
 [node name="bandit2" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1273.41, -330.457 )
@@ -523,7 +523,6 @@ position = Vector2( 2652.03, -372.826 )
 
 [node name="bandit4" parent="." instance=ExtResource( 9 )]
 position = Vector2( 3768.33, -580.422 )
-script = ExtResource( 17 )
 
 [node name="planteCarnivore18" parent="." instance=ExtResource( 13 )]
 position = Vector2( 4431.2, -283.876 )
@@ -672,7 +671,6 @@ position = Vector2( 19137.7, -1363.43 )
 
 [node name="bandit29" parent="." instance=ExtResource( 9 )]
 position = Vector2( 19325.7, -1358.41 )
-script = ExtResource( 17 )
 
 [node name="LifeWin" parent="." instance=ExtResource( 18 )]
 position = Vector2( 25362, -232.161 )
@@ -683,3 +681,16 @@ position = Vector2( 17729.6, -1361.13 )
 [node name="StaticBody2D53" parent="." instance=ExtResource( 10 )]
 position = Vector2( 19417.9, -1333.26 )
 rotation = 3.14159
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+motion_mirroring = Vector2( 1250, 0 )
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2( -224.506, -1205.34 )
+scale = Vector2( 2.045, 6.05958 )
+texture = ExtResource( 19 )
+centered = false
