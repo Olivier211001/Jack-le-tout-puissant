@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://1er niveau platforms scenes/flat.tscn" type="PackedScene" id=1]
 [ext_resource path="res://1er niveau platforms scenes/ledge.tscn" type="PackedScene" id=2]
@@ -16,6 +16,8 @@
 [ext_resource path="res://Scene sprites/ledge.png" type="Texture" id=14]
 [ext_resource path="res://Scene sprites/rock.png" type="Texture" id=15]
 [ext_resource path="res://Jacques/Jacques.tscn" type="PackedScene" id=16]
+[ext_resource path="res://MushroomLife/LifeWin.gd" type="Script" id=17]
+[ext_resource path="res://MushroomLife/LifeWin.tscn" type="PackedScene" id=18]
 
 [node name="Forêt" type="Node2D"]
 position = Vector2( 1407.03, 629.9 )
@@ -521,6 +523,7 @@ position = Vector2( 2652.03, -372.826 )
 
 [node name="bandit4" parent="." instance=ExtResource( 9 )]
 position = Vector2( 3768.33, -580.422 )
+script = ExtResource( 17 )
 
 [node name="planteCarnivore18" parent="." instance=ExtResource( 13 )]
 position = Vector2( 4431.2, -283.876 )
@@ -669,6 +672,10 @@ position = Vector2( 19137.7, -1363.43 )
 
 [node name="bandit29" parent="." instance=ExtResource( 9 )]
 position = Vector2( 19325.7, -1358.41 )
+script = ExtResource( 17 )
+
+[node name="LifeWin" parent="." instance=ExtResource( 18 )]
+position = Vector2( 25362, -232.161 )
 
 [node name="StaticBody2D52" parent="." instance=ExtResource( 10 )]
 position = Vector2( 17729.6, -1361.13 )
