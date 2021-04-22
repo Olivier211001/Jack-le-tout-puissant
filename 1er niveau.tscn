@@ -687,7 +687,7 @@ position = Vector2( 10514.9, -755.621 )
 position = Vector2( 6453.28, -258.115 )
 
 [node name="LifeWin2" parent="." instance=ExtResource( 18 )]
-position = Vector2( 1641.04, -210.433 )
+position = Vector2( 1635.7, -210.433 )
 
 [node name="LifeWin" parent="." instance=ExtResource( 18 )]
 position = Vector2( 25362, -232.161 )
