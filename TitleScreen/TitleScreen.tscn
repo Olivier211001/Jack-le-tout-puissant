@@ -11,10 +11,14 @@
 [node name="TitleScreen" type="Node"]
 script = ExtResource( 7 )
 
-[node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 1.28008, 1 )
+[node name="background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
 texture = ExtResource( 1 )
-centered = false
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_right = 1.0

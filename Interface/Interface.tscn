@@ -46,7 +46,7 @@ margin_top = -160.792
 margin_right = 96.0
 margin_bottom = -103.792
 custom_fonts/font = SubResource( 1 )
-text = "Paused"
+text = "Pause"
 align = 1
 valign = 1
 __meta__ = {
@@ -66,9 +66,11 @@ margin_bottom = 90.0
 [node name="MainScreen" parent="PauseOverlay/PauseMenu" instance=ExtResource( 5 )]
 margin_right = 300.0
 margin_bottom = 88.0
+text = "Menu Principal"
 
 [node name="QuitButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 4 )]
 margin_top = 92.0
 margin_right = 300.0
 margin_bottom = 181.0
+text = "Quitter"
 [connection signal="pressed" from="PauseOverlay/PauseMenu/QuitButton" to="PauseOverlay/PauseMenu/QuitButton" method="_on_QuitButton_pressed"]
