@@ -9,6 +9,7 @@ var velocity = Vector2()
 
 var direction = -1
 
+
 var dead = false
 
 var attack = false
@@ -105,6 +106,7 @@ func _on_AnimatedSprite_animation_finished():
 	if $AnimatedSprite.animation == "die":
 		life = 0
 		queue_free()
+		get_tree().change_scene("res://TitleScreen/TitleScreen.tscn")
 	if $AnimatedSprite.animation == "attack":
 		$killzone/c1.disabled
 		$killzone/c2.disabled

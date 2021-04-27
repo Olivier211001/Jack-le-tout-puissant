@@ -26,7 +26,7 @@ func _physics_process(_delta):
 	   $AnimatedSprite.flip_h = true
 	   $AnimatedSprite.play("courir")
 	  elif Input.is_action_pressed("sword"):
-	   $AnimatedSprite.play("attack")
+	   JackAttack()
 	   isAttacking = true
 	   $AttackArea/CollisionShape2D.disabled = false
 	   $AttackArea/CollisionShape2D2.disabled = false
@@ -52,10 +52,12 @@ func _on_AnimatedSprite_animation_finished():
 
 	if $AnimatedSprite.animation == "die":
 		queue_free()
-
+		get_tree().reload_current_scene()
 
 
 func _on_jackarea_area_entered(area):
+	if area.is_in_group("fallwall"):
+		get_tree().reload_current_scene()
 	if area.is_in_group("Killzone"):
 	  hurted = true
 	  $AnimatedSprite.play("hurt")
@@ -66,3 +68,8 @@ func _on_jackarea_area_entered(area):
 	  life = life - 1
 	if life == 0:
 		$AnimatedSprite.play("die")
+		
+func JackAttack():
+	
+	 $AnimatedSprite.play("attack")
+	 
