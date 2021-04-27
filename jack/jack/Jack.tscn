@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://jack/attack/adventurer-attack3-03.png" type="Texture" id=1]
 [ext_resource path="res://jack/attack/adventurer-attack3-05.png" type="Texture" id=2]
@@ -27,19 +27,24 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
+"frames": [ ExtResource( 17 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 18 ) ],
 "loop": true,
-"name": "hurt",
-"speed": 2.0
+"name": "sauter",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ) ],
 "loop": true,
 "name": "die",
-"speed": 1.0
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
 "loop": true,
 "name": "respiration",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "hurt",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 11 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 14 ) ],
@@ -47,15 +52,10 @@ animations = [ {
 "name": "courir",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 17 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 18 ) ],
-"loop": true,
-"name": "sauter",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 5 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "attack",
-"speed": 8.0
+"speed": 30.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -65,11 +65,15 @@ extents = Vector2( 8.53345, 28.4728 )
 extents = Vector2( 10, 15.4038 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 14.6043, 25.8608 )
+extents = Vector2( 16.1952, 25.8608 )
 
 [sub_resource type="CapsuleShape2D" id=5]
 radius = 8.89243
 height = 7.71202
+
+[sub_resource type="CapsuleShape2D" id=6]
+radius = 9.54804
+height = 6.63934
 
 [node name="Jack" type="KinematicBody2D" groups=[
 "Jacky",
@@ -91,6 +95,8 @@ smoothing_enabled = true
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
 
 [node name="Interface" parent="Camera2D/CanvasLayer" instance=ExtResource( 23 )]
+margin_left = 0.50415
+margin_top = -0.498596
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -1.45615, 6.45467 )
@@ -116,7 +122,7 @@ disabled = true
 collision_mask = 2147483649
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="jackarea"]
-position = Vector2( -0.995125, 8.74263 )
+position = Vector2( -1.62284, 9.07634 )
 shape = SubResource( 4 )
 
 [node name="flipArea" type="Area2D" parent="." groups=[
@@ -124,11 +130,15 @@ shape = SubResource( 4 )
 ]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="flipArea"]
-position = Vector2( 74.3631, 22.1686 )
+position = Vector2( 151.862, 31.5153 )
 shape = SubResource( 5 )
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="flipArea"]
-position = Vector2( -75.7662, 20.7655 )
-shape = SubResource( 5 )
+[node name="flipArea2" type="Area2D" parent="." groups=[
+"Flip2",
+]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="flipArea2"]
+position = Vector2( -149.894, 27.8406 )
+shape = SubResource( 6 )
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
 [connection signal="area_entered" from="jackarea" to="." method="_on_jackarea_area_entered"]

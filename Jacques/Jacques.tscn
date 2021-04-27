@@ -1,0 +1,248 @@
+[gd_scene load_steps=40 format=2]
+
+[ext_resource path="res://Jacques/ProgressBar.gd" type="Script" id=1]
+[ext_resource path="res://Jacques/EVil Wizard 2/Sprites/Attack1.png" type="Texture" id=2]
+[ext_resource path="res://Jacques/Jacques.gd" type="Script" id=3]
+[ext_resource path="res://Jacques/EVil Wizard 2/Sprites/Run.png" type="Texture" id=5]
+[ext_resource path="res://Jacques/EVil Wizard 2/Sprites/Take hit.png" type="Texture" id=6]
+[ext_resource path="res://Jacques/EVil Wizard 2/Sprites/Death.png" type="Texture" id=7]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 250, 250 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 250, 0, 250, 250 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 500, 0, 250, 250 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 750, 0, 250, 250 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 1000, 0, 250, 250 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 1250, 0, 250, 250 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 1500, 0, 250, 250 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 250, 250 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 250, 0, 250, 250 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 500, 0, 250, 250 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 250, 250 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 250, 0, 250, 250 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 500, 0, 250, 250 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 750, 0, 250, 250 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 1000, 0, 250, 250 )
+
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 1250, 0, 250, 250 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 1500, 0, 250, 250 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 1750, 0, 250, 250 )
+
+[sub_resource type="AtlasTexture" id=19]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 250, 250 )
+
+[sub_resource type="AtlasTexture" id=20]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 250, 0, 250, 250 )
+
+[sub_resource type="AtlasTexture" id=21]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 500, 0, 250, 250 )
+
+[sub_resource type="AtlasTexture" id=22]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 750, 0, 250, 250 )
+
+[sub_resource type="AtlasTexture" id=23]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 1000, 0, 250, 250 )
+
+[sub_resource type="AtlasTexture" id=24]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 1250, 0, 250, 250 )
+
+[sub_resource type="AtlasTexture" id=25]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 1500, 0, 250, 250 )
+
+[sub_resource type="AtlasTexture" id=26]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 1750, 0, 250, 250 )
+
+[sub_resource type="SpriteFrames" id=27]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "idle",
+"speed": 100.0
+}, {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
+"loop": true,
+"name": "die",
+"speed": 4.0
+}, {
+"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"loop": true,
+"name": "hurt",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ) ],
+"loop": true,
+"name": "run",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ) ],
+"loop": true,
+"name": "attack",
+"speed": 20.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=28]
+extents = Vector2( 25.0906, 31.1624 )
+
+[sub_resource type="RectangleShape2D" id=29]
+extents = Vector2( 74.0251, 62.6591 )
+
+[sub_resource type="RectangleShape2D" id=30]
+extents = Vector2( 11.0849, 25.203 )
+
+[sub_resource type="Theme" id=31]
+
+[sub_resource type="StyleBoxFlat" id=32]
+bg_color = Color( 0.807843, 0.0313726, 0.0313726, 1 )
+
+[sub_resource type="StyleBoxFlat" id=33]
+bg_color = Color( 0.760784, 0.709804, 0.709804, 1 )
+corner_detail = 10
+
+[node name="Jacques" type="KinematicBody2D"]
+position = Vector2( 446.886, 365.357 )
+collision_layer = 2
+collision_mask = 3
+script = ExtResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -10.8115, -49.7328 )
+scale = Vector2( 1.4963, 2.10739 )
+frames = SubResource( 27 )
+animation = "run"
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( -29.3545, 4.71799 )
+enabled = true
+cast_to = Vector2( 0, 40 )
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 2.90351, 7.74155 )
+shape = SubResource( 28 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -12.5978, -21.1852 )
+shape = SubResource( 29 )
+
+[node name="killzone" type="Area2D" parent="." groups=[
+"Killzone",
+]]
+collision_mask = 2147483649
+
+[node name="c1" type="CollisionShape2D" parent="killzone"]
+position = Vector2( -75.8495, 6.758 )
+shape = SubResource( 30 )
+disabled = true
+
+[node name="c2" type="CollisionShape2D" parent="killzone"]
+position = Vector2( 50.8306, 6.05075 )
+shape = SubResource( 30 )
+disabled = true
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_left = -57.6454
+margin_top = -98.7244
+margin_right = 30.3546
+margin_bottom = -89.7244
+theme = SubResource( 31 )
+custom_styles/fg = SubResource( 32 )
+custom_styles/bg = SubResource( 33 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+max_value = 10.0
+value = 10.0
+percent_visible = false
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]

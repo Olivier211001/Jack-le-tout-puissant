@@ -31,25 +31,25 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 20 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 19 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 21 ), ExtResource( 18 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 23 ), ExtResource( 22 ) ],
 "loop": true,
-"name": "attack",
-"speed": 30.0
+"name": "die",
+"speed": 8.0
 }, {
 "frames": [ ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "run",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 23 ), ExtResource( 22 ) ],
-"loop": true,
-"name": "die",
-"speed": 8.0
-}, {
 "frames": [  ],
 "loop": true,
 "name": "recup",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 19 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 21 ), ExtResource( 18 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "attack",
+"speed": 30.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -59,7 +59,7 @@ extents = Vector2( 25.0906, 31.1624 )
 extents = Vector2( 23.0199, 31.5416 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 10.7762, 21.5041 )
+extents = Vector2( 10.7762, 17.541 )
 
 [node name="bandit" type="KinematicBody2D"]
 position = Vector2( 446.886, 365.357 )
@@ -96,12 +96,12 @@ shape = SubResource( 3 )
 collision_mask = 2147483649
 
 [node name="c1" type="CollisionShape2D" parent="killzone"]
-position = Vector2( -9.80001, -2.38379 )
+position = Vector2( -10.5492, -3.88211 )
 shape = SubResource( 4 )
 disabled = true
 
 [node name="c2" type="CollisionShape2D" parent="killzone"]
-position = Vector2( 14.5677, -1.85404 )
+position = Vector2( 14.5677, -3.35233 )
 shape = SubResource( 4 )
 disabled = true
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

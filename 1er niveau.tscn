@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://1er niveau platforms scenes/flat.tscn" type="PackedScene" id=1]
 [ext_resource path="res://1er niveau platforms scenes/ledge.tscn" type="PackedScene" id=2]
@@ -15,6 +15,11 @@
 [ext_resource path="res://Enemy03/Enemy03/planteCarnivore.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scene sprites/ledge.png" type="Texture" id=14]
 [ext_resource path="res://Scene sprites/rock.png" type="Texture" id=15]
+[ext_resource path="res://Jacques/Jacques.tscn" type="PackedScene" id=16]
+[ext_resource path="res://fallwall.tscn" type="PackedScene" id=17]
+[ext_resource path="res://MushroomLife/LifeWin.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Background/dark-forest-bg.jpg" type="Texture" id=19]
+[ext_resource path="res://1er niveau platforms scenes/wood_sign.tscn" type="PackedScene" id=20]
 
 [node name="Forêt" type="Node2D"]
 position = Vector2( 1407.03, 629.9 )
@@ -100,6 +105,9 @@ position = Vector2( 8231.36, -624.127 )
 [node name="StaticBody2D20" type="StaticBody2D" parent="."]
 position = Vector2( 9042.08, -627.691 )
 
+[node name="Node2D" parent="StaticBody2D20" instance=ExtResource( 17 )]
+position = Vector2( 1594.91, 3859.51 )
+
 [node name="StaticBody2D" type="StaticBody2D" parent="StaticBody2D20"]
 
 [node name="Sprite" type="Sprite" parent="StaticBody2D20/StaticBody2D"]
@@ -127,7 +135,7 @@ scale = Vector2( 1.181, 1.041 )
 texture = ExtResource( 8 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D20"]
-polygon = PoolVector2Array( -594.776, -53.3569, 215.322, -45.3217, 751.649, -49.5621, 736.398, 11.0072, -578.888, -1.4339 )
+polygon = PoolVector2Array( -594.776, -53.3569, 215.322, -45.3217, 751.647, -49.5919, 736.398, 11.0072, -578.888, -1.4339 )
 
 [node name="StaticBody2D21" parent="." instance=ExtResource( 2 )]
 position = Vector2( 7741.5, -500.567 )
@@ -445,8 +453,15 @@ texture = ExtResource( 8 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D95"]
 polygon = PoolVector2Array( -1120.53, -50.2936, 793.875, -51.881, 803.191, -38.2635, 792.514, 7.78851, -1118.68, 7.56174, -1127.87, -41.2286 )
 
+[node name="Sprite" parent="." instance=ExtResource( 20 )]
+position = Vector2( 3994.26, -571.256 )
+scale = Vector2( 0.0847464, 0.0827009 )
+
 [node name="Jack" parent="." instance=ExtResource( 12 )]
-position = Vector2( -1235.54, -572.656 )
+position = Vector2( -1257.69, -530.863 )
+
+[node name="knight" parent="." instance=ExtResource( 11 )]
+position = Vector2( 15370.5, -461.906 )
 
 [node name="bandit2" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1273.41, -330.457 )
@@ -558,15 +573,15 @@ position = Vector2( 8811.56, -719.447 )
 [node name="bandit7" parent="." instance=ExtResource( 9 )]
 position = Vector2( 8517.98, -721.713 )
 
-[node name="knight" parent="." instance=ExtResource( 11 )]
-position = Vector2( 26221.9, -233.867 )
+[node name="Jacques" parent="." instance=ExtResource( 16 )]
+position = Vector2( 26432.7, -294.531 )
 
 [node name="StaticBody2D111" parent="." instance=ExtResource( 10 )]
-position = Vector2( 26995.1, -186.231 )
+position = Vector2( 26995.1, -210.042 )
 rotation = 3.14159
 
 [node name="StaticBody2D112" parent="." instance=ExtResource( 10 )]
-position = Vector2( 25076.2, -184.916 )
+position = Vector2( 25073, -207.933 )
 
 [node name="bandit14" parent="." instance=ExtResource( 9 )]
 position = Vector2( 13950.2, -381.981 )
@@ -619,15 +634,6 @@ position = Vector2( 14412.2, -365.991 )
 [node name="StaticBody2D24" parent="." instance=ExtResource( 10 )]
 position = Vector2( 13831.5, -339.459 )
 
-[node name="bandit17" parent="." instance=ExtResource( 9 )]
-position = Vector2( 15584.4, -451.365 )
-
-[node name="bandit18" parent="." instance=ExtResource( 9 )]
-position = Vector2( 14895.5, -454.54 )
-
-[node name="bandit19" parent="." instance=ExtResource( 9 )]
-position = Vector2( 15255.8, -454.54 )
-
 [node name="StaticBody2D110" parent="." instance=ExtResource( 10 )]
 position = Vector2( 14800.9, -416.773 )
 
@@ -665,9 +671,43 @@ position = Vector2( 19137.7, -1363.43 )
 [node name="bandit29" parent="." instance=ExtResource( 9 )]
 position = Vector2( 19325.7, -1358.41 )
 
+[node name="LifeWin5" parent="." instance=ExtResource( 18 )]
+position = Vector2( 22732.6, -1351.31 )
+
+[node name="LifeWin4" parent="." instance=ExtResource( 18 )]
+position = Vector2( 22297.4, -1353.26 )
+
+[node name="LifeWin6" parent="." instance=ExtResource( 18 )]
+position = Vector2( 15980.7, -676.311 )
+
+[node name="LifeWin3" parent="." instance=ExtResource( 18 )]
+position = Vector2( 10514.9, -755.621 )
+
+[node name="LifeWin7" parent="." instance=ExtResource( 18 )]
+position = Vector2( 6453.28, -258.115 )
+
+[node name="LifeWin2" parent="." instance=ExtResource( 18 )]
+position = Vector2( 1635.7, -210.433 )
+
+[node name="LifeWin" parent="." instance=ExtResource( 18 )]
+position = Vector2( 25362, -232.161 )
+
 [node name="StaticBody2D52" parent="." instance=ExtResource( 10 )]
 position = Vector2( 17729.6, -1361.13 )
 
 [node name="StaticBody2D53" parent="." instance=ExtResource( 10 )]
 position = Vector2( 19417.9, -1333.26 )
 rotation = 3.14159
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+motion_mirroring = Vector2( 1250, 0 )
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2( -224.506, -1205.34 )
+scale = Vector2( 2.045, 6.05958 )
+texture = ExtResource( 19 )
+centered = false

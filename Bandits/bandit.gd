@@ -14,7 +14,6 @@ var attack = false
 
 
 
-
 func _physics_process(_delta):
 
 	if dead == false && attack == false:
@@ -54,10 +53,10 @@ func _on_Area2D_area_entered(area):
 
 
 	if area.is_in_group("Sword"):
-
+		
 		  dead = true
 		  $AnimatedSprite.play("die")
-
+		
 
 
 
@@ -68,6 +67,8 @@ func _on_AnimatedSprite_animation_finished():
 		$killzone/c1.disabled
 		$killzone/c2.disabled
 		attack = false
+	
+		
 	
 		
 			

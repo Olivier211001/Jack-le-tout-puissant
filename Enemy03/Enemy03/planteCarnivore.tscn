@@ -1,6 +1,5 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://Enemy03/Enemy03/planteCarnivore.gd" type="Script" id=1]
 [ext_resource path="res://Enemy03/attack_left02.png" type="Texture" id=2]
 [ext_resource path="res://Enemy03/attack_right06.png" type="Texture" id=3]
 [ext_resource path="res://Enemy03/attack_left06.png" type="Texture" id=5]
@@ -10,7 +9,6 @@
 [ext_resource path="res://Enemy03/attack_left01.png" type="Texture" id=12]
 [ext_resource path="res://Enemy03/attack_right07.png" type="Texture" id=16]
 [ext_resource path="res://Enemy03/Enemy03/planteCarnivore.gd" type="Script" id=17]
-
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
