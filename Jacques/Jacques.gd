@@ -106,7 +106,7 @@ func _on_AnimatedSprite_animation_finished():
 	if $AnimatedSprite.animation == "die":
 		life = 0
 		queue_free()
-		get_tree().change_scene("res://TitleScreen/TitleScreen.tscn")
+		get_tree().change_scene("res://EndScreen/EndScreen.tscn")
 	if $AnimatedSprite.animation == "attack":
 		$killzone/c1.disabled
 		$killzone/c2.disabled

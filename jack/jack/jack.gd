@@ -52,12 +52,12 @@ func _on_AnimatedSprite_animation_finished():
 
 	if $AnimatedSprite.animation == "die":
 		queue_free()
-		get_tree().reload_current_scene()
+		get_tree().change_scene("res://DeathScreen/DeathScreen.tscn")
 
 
 func _on_jackarea_area_entered(area):
 	if area.is_in_group("fallwall"):
-		get_tree().reload_current_scene()
+		get_tree().change_scene("res://DeathScreen/DeathScreen.tscn")
 	if area.is_in_group("Killzone"):
 	  hurted = true
 	  $AnimatedSprite.play("hurt")
