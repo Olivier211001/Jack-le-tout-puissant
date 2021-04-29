@@ -27,24 +27,9 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 5 ), ExtResource( 2 ) ],
+"frames": [ ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ) ],
 "loop": true,
-"name": "attack",
-"speed": 30.0
-}, {
-"frames": [ ExtResource( 11 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 14 ) ],
-"loop": true,
-"name": "courir",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
-"loop": true,
-"name": "respiration",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 17 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 18 ) ],
-"loop": true,
-"name": "sauter",
+"name": "die",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
@@ -52,10 +37,25 @@ animations = [ {
 "name": "hurt",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ) ],
+"frames": [ ExtResource( 11 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 14 ) ],
 "loop": true,
-"name": "die",
+"name": "courir",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "sauter",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "respiration",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 5 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "attack",
+"speed": 30.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
