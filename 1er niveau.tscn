@@ -16,11 +16,11 @@
 [ext_resource path="res://Scene sprites/ledge.png" type="Texture" id=14]
 [ext_resource path="res://Scene sprites/rock.png" type="Texture" id=15]
 [ext_resource path="res://Jacques/Jacques.tscn" type="PackedScene" id=16]
-[ext_resource path="res://fallwall.tscn" type="PackedScene" id=17]
+[ext_resource path="res://1er niveau platforms scenes/fallwall.tscn" type="PackedScene" id=17]
 [ext_resource path="res://MushroomLife/LifeWin.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Background/dark-forest-bg.jpg" type="Texture" id=19]
 [ext_resource path="res://1er niveau platforms scenes/wood_sign.tscn" type="PackedScene" id=20]
-[ext_resource path="res://noCollideKingth.tscn" type="PackedScene" id=21]
+[ext_resource path="res://knight/noCollideKnigth.tscn" type="PackedScene" id=21]
 
 [node name="Forêt" type="Node2D"]
 position = Vector2( 1407.03, 629.9 )
