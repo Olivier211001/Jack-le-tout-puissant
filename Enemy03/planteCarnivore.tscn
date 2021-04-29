@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Enemy03/attack_left02.png" type="Texture" id=2]
 [ext_resource path="res://Enemy03/attack_right06.png" type="Texture" id=3]
@@ -8,7 +8,6 @@
 [ext_resource path="res://Enemy03/attack_right05.png" type="Texture" id=10]
 [ext_resource path="res://Enemy03/attack_left01.png" type="Texture" id=12]
 [ext_resource path="res://Enemy03/attack_right07.png" type="Texture" id=16]
-[ext_resource path="res://Enemy03/planteCarnivore.gd" type="Script" id=17]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -17,14 +16,14 @@ animations = [ {
 "name": "idle",
 "speed": 1.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 5 ), ExtResource( 8 ) ],
-"loop": true,
-"name": "attack2",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 10 ), ExtResource( 3 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "attack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 5 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "attack2",
 "speed": 5.0
 } ]
 
@@ -45,7 +44,6 @@ extents = Vector2( 23.3066, 35.4502 )
 
 [node name="planteCarnivore" type="KinematicBody2D"]
 position = Vector2( 350.888, 174.499 )
-script = ExtResource( 17 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 1.533, 1.557 )

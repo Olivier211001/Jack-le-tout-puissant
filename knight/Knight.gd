@@ -9,6 +9,8 @@ var velocity = Vector2()
 
 var direction = -1
 
+var isReallyDead = false
+
 var dead = false
 
 var attack = false
@@ -61,13 +63,13 @@ func _physics_process(_delta):
 		 
 
 func _on_Area2D_area_entered(area):
-	if area.is_in_group("Jack"):
+	if area.is_in_group("Jack") && isReallyDead == false:
 		
 		
 		attack = true
 		hurted = false
 		flip = false
-		dead = false
+		
 		
 		$AnimatedSprite.play("attack")
 		$killzone/c1.disabled = false;
@@ -82,6 +84,7 @@ func _on_Area2D_area_entered(area):
 		if life == 0:
 		  dead = true
 		  hurted = false
+		  isReallyDead = true
 		  $AnimatedSprite.play("die")
 		elif dead == false:
 		  flip = false

@@ -68,6 +68,7 @@ func _on_jackarea_area_entered(area):
 	  life = life - 1
 	if life == 0:
 		$AnimatedSprite.play("die")
+		 
 		
 func JackAttack():
 	
