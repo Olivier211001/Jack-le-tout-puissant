@@ -12,7 +12,7 @@ Nous sommes 2 étudiants de 2ème année en Technique de l'Informatique au Cége
 
 De nos jours, les jeux 2D sont moins dominants dans l'industrie du jeu vidéo, donc nous voulions produire un jeu 2D classique pour appeler à la nostalgie des joueurs de jeux à défilement horizontal des années 80-90 et faire découvrir cet univers aux nouveaux joueurs. Notre projet consiste à créer un jeu 2D à l'aide d'une plateforme à code source ouvert et d'éléments trouvés sur internet.
 
-# Solution
+## Solution
 
 La conception de ce jeu nous a permis d'approfondir nos connaissances dans le domaine de la programmation (surtout en jeux vidéo) ainsi que de déterminer notre niveau d'intérêt envers le développement de jeux vidéo. Nous avons choisi ce projet, car nous aimons beaucoup les jeux vidéo et d'en développer un fut quelque chose de vraiment amusant. Nous avons réussi à créer notre jeu de plateformes à défilement horizontal et à obtenir un certain produit fini avec celui-ci.
 
